@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>How many kids</title>
+  </head>
+  <body>
+    <header>
+      <h1>How many Kids do I have?</h1>
+    </header>
+    <main>
+      <h2>Hints:</h2>
+      <p>
+        <ul>
+          <li>When I make spaghetti for dinner, I use an entire box of pasta and an entire jar of sauce.</li>
+          <li>It takes me approximately 20 minutes to get from "It's time to go!" to "The last kid is buckled in."</li>
+          <li>My whole family connot fit in a standard sedan.</li>
+        </ul>
+      </p>
+      <h3>Have fun guessing!</h3>
+      <input id="clickMe" type="button" value="Click To Guess" onclick="howManyKids(4);" />
+    </main>
+    <script>
+    function howManyKids(kids){
+      guess = prompt("Based on the hints given, how many kids do I have?");
+
+      while (kids != guess){
+        if ( guess < kids ){
+          guess = prompt("With only that many kids, we could fit in a normal car! Guess again!");
+        }
+        else if (guess > kids) {
+          guess = prompt("Geeze, not THAT many! Guess again!");
+        };
+      };
+
+      var message = "Wow, good Guess. I do have 4 kids!"
+      alert(message);
+    }
+      </script>
+  </body>
+</html>
