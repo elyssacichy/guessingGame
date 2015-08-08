@@ -16,6 +16,14 @@
         color: white;
         text-align: center;
       }
+      input {
+        background-color: blue;
+        color: white;
+        font-weight: bold;
+      }
+      input:hover {
+        background-color: purple;
+      }
     </style>
   </head>
   <body>
@@ -51,7 +59,7 @@
         if ( guess < kids ){
           guess = prompt("With only that many kids, we could fit in a normal car! Guess again!");
         }
-        else if (guess > kids) {
+        else {
           guess = prompt("Geeze, not THAT many! Guess again!");
         };
       };
